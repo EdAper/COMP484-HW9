@@ -1,0 +1,195 @@
+/* Page layout and shared typography. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f6f8;
+  color: #1b2c3b;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: min(900px, calc(100% - 40px));
+  margin: 42px auto 24px;
+}
+
+.page-header {
+  margin-bottom: 26px;
+}
+
+.eyebrow,
+.section-label {
+  color: #246b59;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.9rem, 5vw, 2.7rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.intro,
+.description {
+  color: #536575;
+}
+
+.intro {
+  margin: 0;
+}
+
+/* Separate cards provide the light CSS styling extra credit option. */
+.card {
+  margin-bottom: 18px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1px solid #dce4ea;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(27, 44, 59, 0.025);
+}
+
+.section-label {
+  margin: 0 0 5px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin: 5px 0 18px;
+  font-size: 0.95rem;
+}
+
+.date-output {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 16px;
+  background: #e9f5ef;
+  border: 1px solid #cde4d9;
+  border-radius: 8px;
+  color: #205443;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* Keep the conversion table readable on smaller screens. */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #e4eaef;
+  white-space: nowrap;
+}
+
+th {
+  background: #f5f8fa;
+  color: #536575;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+td {
+  font-family: Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.message {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid #4b8b77;
+  background: #f1f7f4;
+  font-size: 0.9rem;
+}
+
+/* Grade calculator results. */
+.calculation {
+  margin: 0 0 12px;
+  color: #536575;
+  font-size: 0.9rem;
+}
+
+.math-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.math-stat {
+  padding: 14px 18px;
+  border: 1px solid #e0e7ec;
+  border-radius: 9px;
+  background: #fafcfd;
+}
+
+.stat-label {
+  margin: 0;
+  color: #536575;
+  font-size: 0.85rem;
+}
+
+.stat-value {
+  margin: 2px 0;
+  color: #205443;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.formula {
+  margin: 0;
+  color: #536575;
+  font-size: 0.8rem;
+}
+
+footer {
+  padding: 8px 0;
+  color: #536575;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 24px);
+    margin-top: 28px;
+  }
+
+  .card {
+    padding: 20px 18px;
+  }
+
+  .math-grid {
+    grid-template-columns: 1fr;
+  }
+}
